@@ -1,0 +1,97 @@
+def make_juice(fruit):
+    return f"{fruit} + 🥤"
+
+def add_ice(juice):
+    return f"{juice} + 🧊"
+
+def add_sugar(iced_juice):
+    return f"{iced_juice} + 🍭"
+
+juice = make_juice("🍎")
+cold_juice=add_ice(juice)
+perfect_juice =add_sugar(cold_juice)
+
+print(perfect_juice)
+
+///////////////
+
+age = int(input("how old are you?")
+)
+print("user answer is", age)
+
+if age < 18:
+    print("you cant drink")
+elif age>18 and age<35:
+    print("you drink everything")
+elif age>35 and age<70:
+    print('you need to take care your health')
+elif age == 75 or age ==80:
+    print('go to bed')
+else:
+    print("go ahead")
+
+///////////
+
+from random import randint
+
+user_choice = int(input("Choose number."))
+pc_choice = randint(1, 50)
+
+print(pc_choice)
+if user_choice == pc_choice:
+    print("you won")
+elif user_choice > pc_choice:
+    print("Lower")
+elif user_choice < pc_choice:
+    print("Higher")
+////////////////
+
+distance = 0
+
+while distance <= 20:
+    print("I'm runnding", distance,"km")
+    distance = distance+1
+/////
+name="choi"
+print(name.upper(),name.replace("o", "🍎").upper())
+
+/////
+--list
+day_of_week=["mon","tue","wed","thur","fri"]
+
+day_of_week.remove("mon")
+day_of_week.append("sat")
+print(day_of_week)
+
+/////
+-- tuple
+day=("mon","tue","wed")
+print(day.index("tue"))
+
+/////
+-- dictionary
+player = {
+    'name' : 'choi',
+    'age' : '32',
+    'alive' : True,
+    'fav_food' : ['🍎','🧊'],
+    'friends' : ('geon', 'joe', 'min'),
+    'friends_fav' : {
+        'fav_food': 'hootago'
+    }
+}
+print(player)
+print(player.get('name'))
+print(player['fav_food'])
+
+player.pop('age')
+print(player)
+
+player['xp'] = 2000
+print(player)
+
+player['fav_food'].append("🍭")
+print(player.get('fav_food'))
+
+player['friends_fav']['fav_food'].append("🍜")
+print(player['friends_fav']['fav_food'])
