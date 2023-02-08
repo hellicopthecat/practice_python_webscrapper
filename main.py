@@ -1,4 +1,5 @@
 from requests import get
+from bs4 import BeautifulSoup
 
 base_url = "https://weworkremotely.com/remote-jobs/search?term="
 search_term="python"
