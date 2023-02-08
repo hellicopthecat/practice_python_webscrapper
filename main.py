@@ -32,7 +32,7 @@ else:
         # 지정된 anchor 안의 classname company의 span들을 company, kind, region으로 차례로 지정
             titles = anchor.find('span', class_="title")
             job_data = {
-                'link': link,
+                'link': f"https://weworkremotely.com{link}",
                 'company': company.string,
                 'region': region.string,
                 'position': titles.string
