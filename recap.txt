@@ -127,3 +127,31 @@ for website in websites:
     if not website.startswith("https://"):
         website = f"https://{website}"
     print(website)
+
+////
+# requests
+
+**tuples=()
+
+results = {}
+
+
+for website in websites:
+    if not website.startswith("https://"):
+        website = f"https://{website}"
+    response = get(website)
+    if response.status_code == 200:
+        results[website] = "OK"
+    else:
+        results[website] = "Failed"
+print(results)
+
+.////
+scrapper 사용시 주의사항
+
+어떤 웹사이트들은 자기네 웹사이트에서 데이터 추출하는것을 원하지 않는다.
+모든 사이트가 웹스크레퍼를 사용할수는 없다.
+극도로 싫어하는 곳은 이용약관을 작성함. 만약 상업적으로 사용하면 고소당할수도 있음.
+
+웹사이트 디자인이 항시 바뀌어 코드를 복붙해서만은 안됨. 코드르 수정하거나 검사해서 웹사이트를 스크랩핑 할수 있도록
+환경을 만들어줘야한다.

@@ -1,29 +1,10 @@
-# requests
-
 from requests import get
-# get은 function, 이동한 다음에 말 그대로 website를 가져오는것
 
-websites=(
-    "google.com",
-    "airbnb.com",
-    "https://twitter.com",
-    "facebook.com",
-    "https://instagram.com"
-)
+base_url = "https://weworkremotely.com/remote-jobs/search?term="
+search_term="python"
 
-# for website in websites:
-#     if website.startswith("https://"):
-#         print("good to go")
-#     else:
-#         print("we have to fix it")
-
-# for website in websites:
-#     if not website.startswith("https://"):
-#         print("we have to fix it")
-#     else:
-#         print("good to go")
-
-for website in websites:
-    if not website.startswith("https://"):
-        website = f"https://{website}"
-    print(website)
+response = get(f"{base_url}{search_term}")
+if response.status_code !=200:
+    print("Can't request website")
+else:
+    print(response.text)
