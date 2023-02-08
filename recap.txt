@@ -95,7 +95,10 @@ print(player.get('fav_food'))
 
 player['friends_fav']['fav_food'].append("🍜")
 print(player['friends_fav']['fav_food'])
+
+
 /////
+
 # for loop
 
 websites=(
@@ -108,6 +111,9 @@ websites=(
 
 for each in websites:
     print("hello", each)
+
+각 웹사이트 마다 헬로우를 프린트
+
 //////
 # url fomatting
 
